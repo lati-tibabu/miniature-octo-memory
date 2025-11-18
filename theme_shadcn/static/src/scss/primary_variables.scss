@@ -1,0 +1,97 @@
+// ============================================================================
+// Shadcn Theme - Primary Variables
+// Modern color scheme inspired by shadcn/ui
+// ============================================================================
+
+// Color System - Neutral Palette
+$o-color-palettes: (
+    'shadcn-slate': (
+        '50':  #f8fafc,
+        '100': #f1f5f9,
+        '200': #e2e8f0,
+        '300': #cbd5e1,
+        '400': #94a3b8,
+        '500': #64748b,
+        '600': #475569,
+        '700': #334155,
+        '800': #1e293b,
+        '900': #0f172a,
+        '950': #020617,
+    ),
+    'shadcn-zinc': (
+        '50':  #fafafa,
+        '100': #f4f4f5,
+        '200': #e4e4e7,
+        '300': #d4d4d8,
+        '400': #a1a1aa,
+        '500': #71717a,
+        '600': #52525b,
+        '700': #3f3f46,
+        '800': #27272a,
+        '900': #18181b,
+        '950': #09090b,
+    ),
+);
+
+// Primary Brand Colors
+$o-color-palettes: map-merge($o-color-palettes, (
+    'primary': (
+        '50':  #f0f9ff,
+        '100': #e0f2fe,
+        '200': #bae6fd,
+        '300': #7dd3fc,
+        '400': #38bdf8,
+        '500': #0ea5e9,
+        '600': #0284c7,
+        '700': #0369a1,
+        '800': #075985,
+        '900': #0c4a6e,
+    ),
+));
+
+// Success, Warning, Danger Colors
+$o-color-palettes: map-merge($o-color-palettes, (
+    'success': (
+        '100': #dcfce7,
+        '300': #86efac,
+        '500': #22c55e,
+        '700': #15803d,
+        '900': #14532d,
+    ),
+    'warning': (
+        '100': #fef3c7,
+        '300': #fcd34d,
+        '500': #eab308,
+        '700': #a16207,
+        '900': #713f12,
+    ),
+    'danger': (
+        '100': #fee2e2,
+        '300': #fca5a5,
+        '500': #ef4444,
+        '700': #b91c1c,
+        '900': #7f1d1d,
+    ),
+));
+
+// Base Theme Colors
+$o-base-color-palette: 'shadcn-zinc';
+
+// Typography
+$o-theme-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$o-theme-headings-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+// Border Radius
+$border-radius: 0.5rem;
+$border-radius-sm: 0.375rem;
+$border-radius-lg: 0.75rem;
+
+// Shadows - Shadcn inspired
+$box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+$box-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+$box-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+// Spacing
+$spacer: 1rem;

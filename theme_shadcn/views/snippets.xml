@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Hero Section Snippet -->
+    <template id="s_shadcn_hero" name="Shadcn Hero Section">
+        <section class="s_shadcn_hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
+                        <div class="badge badge-primary mb-3">New Release</div>
+                        <h1>Build Beautiful Websites with Shadcn Theme</h1>
+                        <p class="lead">
+                            A modern, sleek Odoo theme inspired by shadcn/ui design system.
+                            Clean, elegant, and highly customizable.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+                            <a href="#" class="btn btn-outline-primary btn-lg">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 animate-on-scroll">
+                        <img src="/web/image/website.s_cover_default" alt="Hero Image" class="img-fluid rounded-lg shadow-lg"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Features Section Snippet -->
+    <template id="s_shadcn_features" name="Shadcn Features Section">
+        <section class="s_shadcn_features">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="mb-3">Features</h2>
+                    <p class="text-muted">Everything you need to build modern websites</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 animate-on-scroll">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa fa-rocket"/>
+                            </div>
+                            <h4>Fast &amp; Responsive</h4>
+                            <p>Lightning-fast performance with mobile-first responsive design.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa fa-paint-brush"/>
+                            </div>
+                            <h4>Modern Design</h4>
+                            <p>Clean, elegant UI inspired by the latest design trends.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa fa-cog"/>
+                            </div>
+                            <h4>Highly Customizable</h4>
+                            <p>Easy to customize colors, fonts, and layouts to match your brand.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa fa-shield"/>
+                            </div>
+                            <h4>Secure &amp; Reliable</h4>
+                            <p>Built with security best practices and reliable performance.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa fa-code"/>
+                            </div>
+                            <h4>Developer Friendly</h4>
+                            <p>Clean code structure with comprehensive documentation.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fa fa-users"/>
+                            </div>
+                            <h4>Great Support</h4>
+                            <p>Dedicated support team ready to help you succeed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- CTA Section Snippet -->
+    <template id="s_shadcn_cta" name="Shadcn Call to Action">
+        <section class="py-5" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 text-white animate-on-scroll">
+                        <h2 class="text-white mb-3">Ready to get started?</h2>
+                        <p class="mb-0">Join thousands of businesses using our theme to build amazing websites.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0 animate-on-scroll">
+                        <a href="#" class="btn btn-light btn-lg">Start Free Trial</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Stats Section Snippet -->
+    <template id="s_shadcn_stats" name="Shadcn Statistics">
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 animate-on-scroll">
+                        <div class="p-4">
+                            <h2 class="display-4 fw-bold text-primary mb-2">10K+</h2>
+                            <p class="text-muted mb-0">Active Users</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 animate-on-scroll">
+                        <div class="p-4">
+                            <h2 class="display-4 fw-bold text-primary mb-2">99%</h2>
+                            <p class="text-muted mb-0">Customer Satisfaction</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 animate-on-scroll">
+                        <div class="p-4">
+                            <h2 class="display-4 fw-bold text-primary mb-2">24/7</h2>
+                            <p class="text-muted mb-0">Support Available</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 animate-on-scroll">
+                        <div class="p-4">
+                            <h2 class="display-4 fw-bold text-primary mb-2">500+</h2>
+                            <p class="text-muted mb-0">Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- Register snippets -->
+    <template id="shadcn_snippets" inherit_id="website.snippets" name="Shadcn Snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="inside">
+            <t t-snippet="theme_shadcn.s_shadcn_hero" t-thumbnail="/theme_shadcn/static/src/img/snippets/hero.svg"/>
+            <t t-snippet="theme_shadcn.s_shadcn_features" t-thumbnail="/theme_shadcn/static/src/img/snippets/features.svg"/>
+            <t t-snippet="theme_shadcn.s_shadcn_cta" t-thumbnail="/theme_shadcn/static/src/img/snippets/cta.svg"/>
+            <t t-snippet="theme_shadcn.s_shadcn_stats" t-thumbnail="/theme_shadcn/static/src/img/snippets/stats.svg"/>
+        </xpath>
+    </template>
+</odoo>

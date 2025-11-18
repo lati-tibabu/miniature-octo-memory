@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Theme Options -->
+    <template id="theme_options" name="Shadcn Theme Options" inherit_id="website.snippet_options">
+        <!-- Color Scheme Options -->
+        <xpath expr="." position="inside">
+            <div data-js="shadcn_colors" data-selector=".s_shadcn_hero, .s_shadcn_features, .s_shadcn_cta">
+                <we-select string="Color Scheme" data-name="shadcn_color_opt">
+                    <we-button data-select-class="shadcn-light">Light</we-button>
+                    <we-button data-select-class="shadcn-dark">Dark</we-button>
+                    <we-button data-select-class="shadcn-blue">Blue</we-button>
+                    <we-button data-select-class="shadcn-green">Green</we-button>
+                </we-select>
+            </div>
+        </xpath>
+
+        <!-- Animation Options -->
+        <xpath expr="." position="inside">
+            <div data-js="shadcn_animations" data-selector=".s_shadcn_hero, .s_shadcn_features">
+                <we-select string="Animation Style" data-name="shadcn_anim_opt">
+                    <we-button data-select-class="">None</we-button>
+                    <we-button data-select-class="animate-fade-in">Fade In</we-button>
+                    <we-button data-select-class="animate-slide-up">Slide Up</we-button>
+                    <we-button data-select-class="animate-zoom">Zoom</we-button>
+                </we-select>
+            </div>
+        </xpath>
+
+        <!-- Spacing Options -->
+        <xpath expr="." position="inside">
+            <div data-js="shadcn_spacing" data-selector=".s_shadcn_hero, .s_shadcn_features, .s_shadcn_cta">
+                <we-select string="Spacing" data-name="shadcn_spacing_opt">
+                    <we-button data-select-class="py-3">Small</we-button>
+                    <we-button data-select-class="py-5">Medium</we-button>
+                    <we-button data-select-class="py-6">Large</we-button>
+                </we-select>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Snippet Customization Options -->
+    <template id="snippet_custom_options" name="Shadcn Custom Options">
+        <!-- Hero Section Options -->
+        <div data-selector=".s_shadcn_hero">
+            <we-row string="Layout">
+                <we-button data-select-class="hero-left">Content Left</we-button>
+                <we-button data-select-class="hero-center">Content Center</we-button>
+                <we-button data-select-class="hero-right">Content Right</we-button>
+            </we-row>
+            <we-checkbox string="Show Badge" data-toggle-class="show-badge"/>
+            <we-checkbox string="Show Image" data-toggle-class="show-image"/>
+        </div>
+
+        <!-- Features Section Options -->
+        <div data-selector=".s_shadcn_features">
+            <we-select string="Columns" data-name="feature_columns">
+                <we-button data-select-class="features-2-col">2 Columns</we-button>
+                <we-button data-select-class="features-3-col">3 Columns</we-button>
+                <we-button data-select-class="features-4-col">4 Columns</we-button>
+            </we-select>
+            <we-checkbox string="Show Icons" data-toggle-class="show-icons"/>
+            <we-checkbox string="Card Hover Effect" data-toggle-class="hover-effect"/>
+        </div>
+    </template>
+</odoo>

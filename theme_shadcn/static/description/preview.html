@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadcn Theme Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: #18181b;
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e4e4e7;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #09090b;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            padding: 0.5rem 1rem;
+            color: #52525b;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #09090b;
+            background-color: #f4f4f5;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #09090b;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
+            color: #52525b;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+            border: 1px solid transparent;
+        }
+        
+        .btn-primary {
+            background: #0ea5e9;
+            color: white;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+        
+        .btn-primary:hover {
+            background: #0284c7;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
+        }
+        
+        .btn-outline {
+            border: 1px solid #0ea5e9;
+            color: #0ea5e9;
+        }
+        
+        .btn-outline:hover {
+            background: #0ea5e9;
+            color: white;
+        }
+        
+        .hero-image {
+            background: #0ea5e9;
+            opacity: 0.15;
+            border-radius: 0.75rem;
+            height: 400px;
+            position: relative;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+        }
+        
+        .section-header {
+            text-center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .text-muted {
+            color: #71717a;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            padding: 2rem;
+            border-radius: 0.5rem;
+            background: white;
+            border: 1px solid #e4e4e7;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            background: #f0f9ff;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0ea5e9;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            padding: 4rem 0;
+            color: white;
+        }
+        
+        .cta-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cta h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .btn-light {
+            background: white;
+            color: #0284c7;
+        }
+        
+        .btn-light:hover {
+            background: #f4f4f5;
+        }
+        
+        /* Footer */
+        footer {
+            background: #fafafa;
+            border-top: 1px solid #e4e4e7;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        footer h5 {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer a {
+            color: #52525b;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer a:hover {
+            color: #0ea5e9;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #e4e4e7;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #71717a;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content, .features-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-brand">Shadcn Theme</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">Features</a></li>
+                    <li><a href="#" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <span class="badge">New Release</span>
+                    <h1>Build Beautiful Websites with Shadcn Theme</h1>
+                    <p class="lead">A modern, sleek Odoo theme inspired by shadcn/ui design system. Clean, elegant, and highly customizable.</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Features</h2>
+                <p class="text-muted">Everything you need to build modern websites</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h4>Fast & Responsive</h4>
+                    <p class="text-muted">Lightning-fast performance with mobile-first responsive design.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h4>Modern Design</h4>
+                    <p class="text-muted">Clean, elegant UI inspired by the latest design trends.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h4>Highly Customizable</h4>
+                    <p class="text-muted">Easy to customize colors, fonts, and layouts to match your brand.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Secure & Reliable</h4>
+                    <p class="text-muted">Built with security best practices and reliable performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h4>Developer Friendly</h4>
+                    <p class="text-muted">Clean code structure with comprehensive documentation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h4>Great Support</h4>
+                    <p class="text-muted">Dedicated support team ready to help you succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <div>
+                    <h2>Ready to get started?</h2>
+                    <p>Join thousands of businesses using our theme to build amazing websites.</p>
+                </div>
+                <a href="#" class="btn btn-light">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h5>Shadcn Theme</h5>
+                    <p class="text-muted">Building modern, beautiful web experiences with Odoo.</p>
+                </div>
+                <div>
+                    <h5>Product</h5>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Shadcn Theme. All rights reserved. Built for Odoo 18.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
